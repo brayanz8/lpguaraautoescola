@@ -13,7 +13,6 @@ if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-mot
   document.querySelectorAll('.reveal').forEach(element => { element.classList.add('ready'); observer.observe(element); });
 }
 
-// A animação da moto funciona somente enquanto ela aparece na tela.
 if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   const motionObserver = new IntersectionObserver(entries => entries.forEach(entry => {
     entry.target.classList.toggle('is-in-view', entry.isIntersecting);
